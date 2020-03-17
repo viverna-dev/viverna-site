@@ -39,6 +39,12 @@ h6 {
   padding: 100px 0;
 }
 
+.page-section h3.section-textcontent {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .page-section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
