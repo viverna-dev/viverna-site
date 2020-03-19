@@ -29,6 +29,7 @@ function doSubmit() {
     type: "POST",
     url: scriptUrl,
     data: formData,
+    crossDomain: true,
     error: function(data) {
       setThanksButton();
     },
