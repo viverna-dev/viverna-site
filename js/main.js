@@ -16,3 +16,31 @@
   });
 
 })(jQuery); // End of use strict
+
+function doSubmit() {
+  var scriptUrl = "https://script.google.com/macros/s/AKfycbzCb8s-mzIFGUGSiTlowyjFvkAABNcFXQg5fZ3CceXQtTc_opIB/exec";
+  var formData = {
+    name: $('#name').val(),
+    email: $('#email').val(),
+    message: $('#message').val()
+  };
+
+  $.ajax({
+    type: "POST",
+    url: scriptUrl,
+    data: formData,
+    error: function(data) {
+      setThanksButton();
+    },
+    success: function(data){
+      setThanksButton();
+    }
+  });
+}
+
+function setThanksButton() {
+  var button = $('#sendMessageButton');
+  button.removeClass('btn-primary');
+  button.addClass('btn-success');
+  button.text('Thank you!'); 
+}
